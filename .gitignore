@@ -1,0 +1,6 @@
+.vagrant
+*.vdi
+*.iso
+*.iso.lock
+*.box
+packer/packer_cache/
