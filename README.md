@@ -13,6 +13,7 @@ reboot
 ```
 * Устанавливаем необходимо ПО
 ```shell
+echo "SELINUX=disabled" > /etc/sysconfig/selinux && setenforce 0 && \
 dnf install epel-release -y && \
 dnf install htop mc net-tools psmisc git rsync glibc-langpack-ru  -y && \
 dnf groupinstall "Development Tools" -y && \
@@ -42,9 +43,9 @@ vagrant up && vargant ssh
 sudo echo "SELINUX=disabled" > /etc/sysconfig/selinux && sudo setenforce 0 && \
 sudo yum install -y http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm && \
 sudo yum --enablerepo elrepo-kernel install kernel-ml -y && \
- sudo grub2-mkconfig -o /boot/grub2/grub.cfg && \
- sudo grub2-set-default 0 && \
- sudo reboot 
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg && \
+sudo grub2-set-default 0 && \
+sudo reboot 
 ```
 - входим после перезагрузки и проверяем с каким ядром загрузилась ос
 ```shell
