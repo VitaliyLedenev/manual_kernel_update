@@ -18,7 +18,7 @@ dnf install htop mc net-tools psmisc git rsync glibc-langpack-ru  -y && \
 dnf groupinstall "Development Tools" -y && \
 dnf install elfutils-libelf-devel -y && cd /usr/src && \
 curl -O https://releases.hashicorp.com/vagrant/2.2.7/vagrant_2.2.7_x86_64.rpm && \
-dnf install vagrant_2.2.7_x86_64.rpm - y &&  \
+dnf install vagrant_2.2.7_x86_64.rpm -y &&  \
 curl -O https://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo && \
 mv virtualbox.repo /etc/yum.repos.d/ && \
 dnf update -y && dnf install VirtualBox-6.1.x86_64 -y && \
